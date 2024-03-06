@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator</title>
+<style>
+  body {
+    font-family: system-ui;
+    color: black;
+    text-align: center;
+  }
+
+ 
+ 
+</style>
+</head>
+<body>
+
+<h1>QR code generator App </h1>
+</br>
+</br>
+
+<input type="text" id="in">
+<div>
+<button id="but" onclick="showit()">Search</button>
+</div>
+</br>
+<img src="" id="img" border>
+
+<script>
+  function showit() {
+    var textinput = document.getElementById("in").value;
+    var img = document.getElementById("img");
+    img.src = "https://api.qrserver.com/v1/create-qr-code/?data=" + textinput + "&size=200x200";
+  }
+</script>
+
+</body>
+</html>
